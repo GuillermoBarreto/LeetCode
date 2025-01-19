@@ -20,3 +20,4 @@ public boolean sleepIn(boolean weekday, boolean vacation) {
     // This all can be shortened to: return (!weekday || vacation);
     // Here we just put the return-false last, or could use an if/else.
   }
+  
