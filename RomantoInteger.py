@@ -52,5 +52,12 @@ class solution:
 
         total = 0 
         prev_value = 0
+
+        for char in reversed(s):
+            value = roman_map[char]
+            if value < prev_value
+               total -= value
+            else:
+                total += value
         
     
