@@ -34,7 +34,6 @@
 # -109 <= target <= 109
 # Only one valid answer exists.
 
-<<<<<<< HEAD
 class Solution:
     def twoSum(self, nums, target):
         num_map = {}
@@ -43,12 +42,3 @@ class Solution:
             if complement in num_map:
                 return [num_map[complement], i]
             num_map[num] = i
-=======
-def twoSum(nums, target):
-    num_map = {}  # To store number and its index
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in num_map:
-            return [num_map[complement], i]
-        num_map[num] = i 
->>>>>>> 31f715000299894cefd312777024d09fc4d2b890
