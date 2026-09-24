@@ -26,7 +26,5 @@
 #so we have the integer x, we need to check whether it reads the same forwards and backwards - that's what a palindrome is.
 
 class Solution:
-    def isPalindrome(sel, x):
+    def isPalindrome(self, x):
         return str(x) == str(x)[::-1]
-    
-    #solution
