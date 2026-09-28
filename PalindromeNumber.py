@@ -23,7 +23,8 @@
 
 # -231 <= x <= 231 - 1
 
-#so we have the integer x, we need to check whether it reads the same forwards and backwards - that's what a palindrome is.
+# A palindrome reads the same forwards and backwards. Reversing the string
+# handles negatives (leading '-') and trailing zeros correctly.
 
 class Solution:
     def isPalindrome(self, x):
