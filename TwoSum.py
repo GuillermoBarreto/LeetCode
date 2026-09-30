@@ -36,6 +36,12 @@
 
 class Solution:
     def twoSum(self, nums, target):
+        """Return indices of the two numbers that add up to target.
+
+        Runs in O(n) time and O(n) space using a hash map of seen values
+        to their indices. Assumes exactly one valid pair exists, so the
+        same element is never used twice.
+        """
         num_map = {}
         for i, num in enumerate(nums):
             complement = target - num
