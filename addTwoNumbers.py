@@ -30,6 +30,13 @@
 # 0 <= Node.val <= 9
 # It is guaranteed that the list represents a number that does not have leading zeros.
 
+# Definition for singly-linked list (not provided by LeetCode's runner,
+# so it is defined here to keep this file runnable standalone).
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def addTwoNumbers(self, l1, l2):
         dummy = ListNode()
