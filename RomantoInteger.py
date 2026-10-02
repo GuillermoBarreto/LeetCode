@@ -44,6 +44,12 @@
 
 class Solution:
     def romanToInt(self, s):
+        """Convert a Roman numeral string to its integer value.
+
+        Scans right to left, subtracting a symbol when it is smaller than
+        the previous one (handles IV, IX, XL, XC, CD, CM). Runs in O(n)
+        time and O(1) extra space, where n is the length of s.
+        """
         roman_map = {
             'I': 1, 'V': 5, 'X': 10,
             'L': 50, 'C': 100,
