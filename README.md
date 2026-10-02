@@ -16,6 +16,9 @@ My LeetCode practice solutions in Python.
 
 ## How to run
 
+The solution files are plain modules (no `__main__` blocks), so import them
+in a REPL to try them out:
+
 ```bash
-python3 TwoSum.py
+python3 -c "from TwoSum import Solution; print(Solution().twoSum([2,7,11,15], 9))"
 ```
