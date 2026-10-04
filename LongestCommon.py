@@ -20,8 +20,16 @@
 # 0 <= strs[i].length <= 200
 # strs[i] consists of only lowercase English letters if it is non-empty.
 
+from typing import List
+
 class Solution:
-    def longestCommonPrefix(self, strs):
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        """Return the longest prefix shared by every string in strs.
+
+        Returns "" when strs is empty or the strings share no prefix.
+        Time: O(n * m) where n is the number of strings and m is the
+        length of the shortest one.
+        """
         if not strs:
             return ""
         
