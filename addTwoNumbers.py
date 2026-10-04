@@ -32,13 +32,22 @@
 
 # Definition for singly-linked list (not provided by LeetCode's runner,
 # so it is defined here to keep this file runnable standalone).
+from typing import Optional
+
+
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val: int = 0, next: Optional["ListNode"] = None) -> None:
         self.val = val
         self.next = next
 
 class Solution:
-    def addTwoNumbers(self, l1, l2):
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        """Add two non-negative integers stored as reversed-order linked lists.
+
+        Walks both lists once, carrying overflow digits forward. Returns the
+        sum as a new linked list. Time: O(max(n, m)), space: O(max(n, m))
+        for the result list.
+        """
         dummy = ListNode()
         current = dummy
         carry = 0
