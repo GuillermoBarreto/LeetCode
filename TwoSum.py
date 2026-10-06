@@ -34,8 +34,11 @@
 # -109 <= target <= 109
 # Only one valid answer exists.
 
+from typing import List
+
+
 class Solution:
-    def twoSum(self, nums, target):
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         """Return indices of the two numbers that add up to target.
 
         Runs in O(n) time and O(n) space using a hash map of seen values
