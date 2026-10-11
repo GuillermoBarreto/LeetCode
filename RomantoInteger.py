@@ -43,12 +43,14 @@
 # It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 class Solution:
-    def romanToInt(self, s):
+    def romanToInt(self, s: str) -> int:
         """Convert a Roman numeral string to its integer value.
 
         Scans right to left, subtracting a symbol when it is smaller than
         the previous one (handles IV, IX, XL, XC, CD, CM). Runs in O(n)
         time and O(1) extra space, where n is the length of s.
+
+        Raises ValueError on any character that is not a valid Roman numeral.
         """
         roman_map = {
             'I': 1, 'V': 5, 'X': 10,
@@ -60,7 +62,9 @@ class Solution:
         prev_value = 0
         
         for char in reversed(s):
-            value = roman_map[char]
+            value = roman_map.get(char)
+            if value is None:
+                raise ValueError(f"invalid Roman numeral character: {char!r}")
             if value < prev_value:
                 total -= value
             else:
